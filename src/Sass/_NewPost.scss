@@ -1,0 +1,113 @@
+@import "base";
+
+.herosection2 {
+  @include grid(30rem);
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  .left {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .background {
+      .backImage {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: blur(3px);
+        z-index: 5;
+        opacity: 0.8;
+      }
+      width: 100%;
+      height: 100%;
+      @include flex();
+      background: rgba($color: #bfc954, $alpha: 0.44);
+      img {
+        width: 80%;
+        z-index: 10;
+      }
+    }
+  }
+  .right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, $diamond, $peral);
+
+    .text {
+      max-width: 340px;
+      small {
+        font-size: 14px;
+        color: white;
+      }
+      h1 {
+        margin: 10px 0px;
+        font-size: 36px;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: rgba($color: #000000, $alpha: 0.5);
+        text-transform: lowercase;
+      }
+      .footer {
+        @include flex();
+        justify-content: flex-start;
+        .btn {
+          margin-right: 20px;
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: normal;
+          padding-bottom: 5px;
+          cursor: pointer;
+          @include transition(0.2s);
+        }
+        h4:hover {
+          border-bottom: 5px solid $yellow;
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .herosection2 {
+    grid-template-columns: 1fr;
+    .right {
+      .text {
+        width: 80%;
+        h1 {
+          font-size: 24px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .herosection2 {
+    grid-template-columns: 1fr;
+    .right {
+      .text {
+        width: 80%;
+        h1 {
+          font-size: 24px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

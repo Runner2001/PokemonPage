@@ -1,0 +1,120 @@
+.symbol {
+  @include symbol();
+}
+.seemore {
+  text-align: center;
+  margin: 20px 0;
+  .Seemore-btn {
+    cursor: pointer;
+    padding: 10px 30px;
+    background-color: $yellow;
+    font-weight: 600;
+    color: black;
+  }
+}
+.productcontainer {
+  width: 90vw;
+  margin: 10px auto;
+
+  .title {
+    align-items: center;
+    h3 {
+      font-size: 24px;
+      span {
+        font-size: 16px;
+        padding: 0.4rem;
+        border-radius: 5px;
+        background-color: $yellow;
+      }
+    }
+  }
+
+  .box-container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    @include grid(200px);
+    grid-gap: 10px;
+    .box {
+      width: 100%;
+      cursor: pointer;
+      // transition: 0.3s linear;
+      background-color: #e2e2e2;
+      border-radius: 10px;
+
+      &:hover {
+        border: 2px solid $yellow;
+        // box-shadow: 0px 15px 40px rgba($color: #000000, $alpha: 0.15);
+      }
+
+      &:hover .image img {
+        transform: scale(1.1);
+        transition: 0.3s linear;
+      }
+      .image {
+        padding: 1rem;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 0.3s linear;
+        }
+      }
+      .content {
+        padding: 2rem 0.3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        h3 {
+          font-size: 18px;
+        }
+        .nature {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h3 {
+            font-size: 16px;
+            font-weight: normal;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .productcontainer {
+    .box-container {
+      .box {
+        .image {
+          text-align: center;
+
+          img {
+            width: 80%;
+            height: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile() {
+  .productcontainer {
+    .box-container {
+      .box {
+        .image {
+          text-align: center;
+
+          img {
+            width: 60%;
+            height: 60%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+footer {
+  background: $dark-yellow;
+  padding: 2rem;
+  position: relative;
+  @include flex();
+  justify-content: space-around;
+
+  .first {
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  .second {
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .social {
+      li {
+        @include flex();
+        justify-content: flex-start;
+        text-transform: none;
+        align-items: center;
+        margin: 5px 0;
+        i {
+          font-size: 1.3rem;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .third {
+    h3 {
+      font-size: 24px;
+      span {
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+@include mobile() {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    div {
+      margin-bottom: 20px;
+      .social {
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap");
+
+$black: #000;
+$black-secondary: #363535;
+$white: #fff;
+$white-secondary: #e2e2e2;
+$yellow: #ffdd00;
+$light-yellow: #ffea00;
+$dark-yellow: #ffd000;
+$peral: rgba(#282566, 0.5);
+$diamond: rgba(#cd43d8, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  text-transform: capitalize;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+@mixin transition($time) {
+  transition: $time ease-in-out;
+}
+.btn {
+  position: relative;
+  padding: 8px 30px;
+  border-radius: 10px;
+  background: $yellow;
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+  z-index: 20;
+  overflow: hidden;
+}
+.btn:hover {
+  transform: scale(1.1);
+  @include transition(0.3s);
+}
+.container {
+  width: 90vw;
+  position: relative;
+  left: 5vw;
+  right: 5vw;
+}
+
+@mixin symbol {
+  width: 28px;
+  height: 28px;
+}
+
+@mixin symbol {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+}
+@mixin mobile {
+  @media screen and (max-width: 440px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}

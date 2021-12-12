@@ -1,0 +1,103 @@
+.gameplay-container {
+  width: 90vw;
+  height: auto;
+  margin: 10px auto;
+  .header {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .gameplay {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    .game {
+      width: 100%;
+      height: auto;
+      @include flex();
+
+      .content {
+        width: 100%;
+        height: 100%;
+        @include flex();
+        .text {
+          width: 60%;
+          margin: auto;
+          h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 16px;
+            color: $black-secondary;
+            margin-bottom: 15px;
+          }
+        }
+      }
+      .movie {
+        width: 100%;
+        min-height: 350px;
+        background: $white-secondary;
+        @include flex();
+        i {
+          font-size: 3rem;
+        }
+      }
+
+      &:nth-child(2) {
+        .content {
+          order: 2;
+        }
+        .movie {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .gameplay-container {
+    width: 100vw;
+    .gameplay {
+      gap: 10px;
+
+      .game {
+        gap: 10px;
+        flex-direction: column;
+
+        .content {
+          .text {
+            width: 70%;
+            text-align: center;
+            padding: 1rem;
+          }
+        }
+
+        &:nth-child(1) {
+          .content {
+            order: 2;
+          }
+          .movie {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile() {
+  .gameplay-container {
+    .gameplay {
+      .game {
+        .content {
+          .text {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

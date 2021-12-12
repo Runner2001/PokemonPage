@@ -1,0 +1,161 @@
+.icons {
+  @include symbol();
+}
+.container {
+  .box-container {
+    width: 90%;
+    margin: 0rem auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    @include grid(250px);
+    gap: 20px;
+    .first {
+      box-shadow: 0 10px 20px rgba($color: #808080, $alpha: 0.25);
+    }
+    .box {
+      width: 100%;
+      height: 250px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #e2e2e2;
+      border-radius: 20px;
+
+      &.image {
+        background: none;
+      }
+      h3 {
+        position: absolute;
+        font-size: 24px;
+        top: 1rem;
+        font-weight: 600;
+      }
+      .detail {
+        width: 100%;
+        margin-top: 30px;
+        .item {
+          width: 80%;
+          margin: 10px auto;
+          display: flex;
+          justify-content: space-between;
+          h4 {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          h5 {
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+      .pokemon {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}
+.evocontainer {
+  width: 100%;
+  margin-bottom: 5rem;
+  @include flex();
+  flex-direction: column;
+  .evotitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .container-evolutaion {
+    @include flex();
+    gap: 20px;
+    img {
+      width: 200px;
+      height: 200px;
+      @include transition(0.2s);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .arrow {
+      @include symbol();
+    }
+  }
+}
+.cardcontainer {
+  background: rgba(96, 1189, 88, 0.4);
+  padding: 4rem 0%;
+  border-radius: 50px 50px 0 0;
+  height: 600px;
+  overflow-x: hidden;
+}
+.cardcontainer .cardheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 4rem;
+  margin-bottom: 30px;
+}
+.cardcontainer .cardheader .side img {
+  cursor: pointer;
+  margin: 0 10px;
+}
+.cardcontainer .cardheader .side img:nth-child(1) {
+  transform: rotate(180deg);
+}
+.cardcontainer h3 {
+  font-size: 36px;
+}
+.cardcontainer .mySwiper {
+  width: 100%;
+  cursor: grab;
+}
+.cardcontainer .mySwiperSlide {
+  width: 100%;
+  height: 100%;
+}
+.cardcontainer .mySwiperSlide img {
+  width: 100%;
+  height: 100%;
+}
+
+@include mobile() {
+  .evocontainer {
+    .container-evolutaion {
+      flex-direction: column;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+@include tablet() {
+  .evocontainer {
+    .container-evolutaion {
+      width: 80%;
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .evocontainer {
+    .container-evolutaion {
+      flex-direction: column;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

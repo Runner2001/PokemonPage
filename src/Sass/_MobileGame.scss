@@ -1,0 +1,130 @@
+.herosection3 {
+  @include grid(25rem);
+  position: relative;
+  height: 80vh;
+
+  h3 {
+    font-size: 36px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .left {
+    @include flex();
+    flex-direction: column;
+    background: #f5eded;
+    .title {
+      font-size: 2rem;
+      margin-bottom: 5px;
+      align-items: center;
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1rem;
+      text-align: center;
+      max-width: 400px;
+      margin-bottom: 20px;
+      color: #363535;
+    }
+  }
+  .right {
+    @include flex();
+    flex-direction: column;
+    background: #f1ff98;
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1rem;
+      text-align: center;
+      max-width: 400px;
+      margin-bottom: 20px;
+      color: #363535;
+    }
+  }
+}
+
+@include tablet() {
+  .herosection3 {
+    height: 100vh;
+    h3 {
+      display: none;
+    }
+    .left {
+      height: 100%;
+      .title {
+        font-size: 2rem;
+      }
+      .subtitle {
+        font-size: 1.5rem;
+      }
+      p {
+        width: 80%;
+        font-size: 1rem;
+      }
+    }
+    .right {
+      height: 100%;
+      .title {
+        font-size: 2rem;
+      }
+      .subtitle {
+        font-size: 1.5rem;
+      }
+      p {
+        width: 80%;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .herosection3 {
+    height: 100vh;
+    h3 {
+      display: none;
+    }
+    .left {
+      height: 100%;
+      .title {
+        font-size: 1.5rem;
+      }
+      .subtitle {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    .right {
+      height: 100%;
+      .title {
+        font-size: 1.5rem;
+      }
+      .subtitle {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
