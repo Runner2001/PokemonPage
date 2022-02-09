@@ -14,14 +14,20 @@ function PokedexItem({ Pokemon, show }) {
           style={{ background: each.bgcolor }}
         >
           <div className="image">
-            <img src={each.image} />
+            <img src={process.env.PUBLIC_URL + each.image} />
           </div>
           <div className="content">
             <h3>{each.name}</h3>
             <div className="nature">
               <h3>{each.hp}</h3>
               {each.ability.map((icons, i) => {
-                return <img key={i} className="symbol" src={icons} />;
+                return (
+                  <img
+                    key={i}
+                    className="symbol"
+                    src={process.env.PUBLIC_URL + icons}
+                  />
+                );
               })}
             </div>
           </div>

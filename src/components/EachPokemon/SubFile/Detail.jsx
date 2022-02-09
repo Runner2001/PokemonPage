@@ -5,7 +5,11 @@ function Detail({ eachPokemon }) {
     <div className="container">
       <div className="box-container">
         <div className="box image">
-          <img className="pokemon" src={eachPokemon[0].image} alt="002" />
+          <img
+            className="pokemon"
+            src={process.env.PUBLIC_URL + eachPokemon[0].image}
+            alt="002"
+          />
         </div>
         <div
           className="box first"
@@ -18,7 +22,12 @@ function Detail({ eachPokemon }) {
               <div className="image">
                 {eachPokemon[0].ability.map((item, i) => {
                   return (
-                    <img className="icons" src={item} alt="Nature" key={i} />
+                    <img
+                      className="icons"
+                      src={process.env.PUBLIC_URL + item}
+                      alt="Nature"
+                      key={i}
+                    />
                   );
                 })}
               </div>
@@ -32,7 +41,7 @@ function Detail({ eachPokemon }) {
               <div className="image">
                 <img
                   className="icons"
-                  src="/images/icons/poison.svg"
+                  src={process.env.PUBLIC_URL + "/images/icons/poison.svg"}
                   alt="poison"
                 />
               </div>
@@ -42,7 +51,7 @@ function Detail({ eachPokemon }) {
               <div className="image">
                 <img
                   className="icons"
-                  src="/images/icons/fire.svg"
+                  src={process.env.PUBLIC_URL + "/images/icons/fire.svg"}
                   alt="fire"
                 />
               </div>

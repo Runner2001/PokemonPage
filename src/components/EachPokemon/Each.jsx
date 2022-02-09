@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { Pokemon } from "../../Pokedex";
 import Card from "./SubFile/Card";
 import Detail from "./SubFile/Detail";
+import NewDetail from "./SubFile/NewDetail";
 import Evoluation from "./SubFile/Evoluation";
 
 function Each() {
@@ -10,9 +11,10 @@ function Each() {
   const eachPokemon = Pokemon.filter((item) => item.id == id);
   return (
     <>
-      <Detail eachPokemon={eachPokemon} />
+      {/* <Detail eachPokemon={eachPokemon} /> */}
+      <NewDetail eachPokemon={eachPokemon} />
       <Evoluation eachPokemon={eachPokemon} />
-      <Card eachPokemon={eachPokemon} />
+      {/* <Card eachPokemon={eachPokemon} /> */}
     </>
   );
 }

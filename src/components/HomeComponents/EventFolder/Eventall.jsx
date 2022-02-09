@@ -18,7 +18,7 @@ export const EventDetail = () => {
   const Show = eventitem.map((item) => {
     return (
       <motion.div className="item" variants={child} key={item.id}>
-        <img src={item.img} alt={item.name} />
+        <img src={process.env.PUBLIC_URL + item.img} alt={item.name} />
         <div className="background">
           <h4 className="event-title">{item.name}</h4>
         </div>

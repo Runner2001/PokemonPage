@@ -10,9 +10,13 @@ function Evoluation({ eachPokemon }) {
         {eachPokemon[0].evoluation.map((item, i) => {
           return (
             <Fragment key={i}>
-              <img src={item} alt="Pokemon photo" />
+              <img src={process.env.PUBLIC_URL + item} alt="Pokemon photo" />
               {evo.length > i + 1 ? (
-                <img className="arrow" src="/images/arrow.svg" alt="arrow" />
+                <img
+                  className="arrow"
+                  src={process.env.PUBLIC_URL + "/images/arrow.svg"}
+                  alt="arrow"
+                />
               ) : (
                 ""
               )}

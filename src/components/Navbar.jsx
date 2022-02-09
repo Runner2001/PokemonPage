@@ -7,7 +7,7 @@ const Navbar = () => {
     <header>
       <div className="logo">
         <h3>pokemon</h3>
-        <img src="../images/logo.png" />
+        <img src={process.env.PUBLIC_URL + "/images/logo.png"} />
       </div>
       <nav className={open ? "navbar active" : "navbar"}>
         <Link to="/" onClick={() => setOpen(false)}>

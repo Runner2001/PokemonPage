@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import Event from './pages/Event';
 import HomePage from './pages/HomePage';
 import Pokedex from './pages/Pokedex';
-import './Sass/index.scss'
+import './Sass/index.css'
 
 function App() {
   const location = useLocation();

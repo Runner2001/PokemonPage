@@ -7,7 +7,7 @@ function MobileGame() {
       <h3 className="midtext">are you mobile gamer ?</h3>
       <div className="left">
         <h2 className="title">
-          Pokemon G <img src="./images/logo.png" />
+          Pokemon G <img src={process.env.PUBLIC_URL + "/images/logo.png"} />
         </h2>
         <h4 className="subtitle">live action ar game</h4>
         <p>

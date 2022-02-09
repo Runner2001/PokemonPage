@@ -32,7 +32,7 @@ const box = eventData.map((item) => {
   return (
     <motion.div className="box" key={item.id} variants={gameChild}>
       <div className="image" style={{ background: item.bgcolor }}>
-        <img src={item.img} alt="logo" />
+        <img src={process.env.PUBLIC_URL + item.img} alt="logo" />
       </div>
       <div className="content">
         <h3>{item.header}</h3>

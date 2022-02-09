@@ -7,11 +7,17 @@ const NewPost = () => {
         <div className="background">
           <img
             className="backImage"
-            src="./images/Background/Dialga and Palkia_.jpeg"
+            src={
+              process.env.PUBLIC_URL +
+              "/images/Background/Dialga and Palkia_.jpeg"
+            }
             alt="diamond and peral image"
           />
           <img
-            src="./images/Background/Dialga and Palkia_.jpeg"
+            src={
+              process.env.PUBLIC_URL +
+              "/images/Background/Dialga and Palkia_.jpeg"
+            }
             alt="diamond and peral image"
           />
         </div>

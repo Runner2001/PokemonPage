@@ -18,7 +18,12 @@ function EventHeader() {
           </div>
           <div className="card">
             <div className="image">
-              <img src="/images/Background/Pokemon Legends Arceus and Pokemon Diamond & Pearl Remakes Get Release Dates - IGN.jpeg" />
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  "/images/Background/Pokemon Legends Arceus and Pokemon Diamond & Pearl Remakes Get Release Dates - IGN.jpeg"
+                }
+              />
             </div>
             <div className="content">
               <h3>Hello Champion</h3>
@@ -36,7 +41,9 @@ function EventHeader() {
           </div>
           <div className="card">
             <div className="image">
-              <img src="/images/Background/lucario.png" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/Background/lucario.png"}
+              />
             </div>
             <div className="content">
               <h3>Lucario arrive</h3>
@@ -50,7 +57,12 @@ function EventHeader() {
           </div>
           <div className="card">
             <div className="image">
-              <img src="/images/Background/pokemon-unite-169.jpg" />
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  "/images/Background/pokemon-unite-169.jpg"
+                }
+              />
             </div>
             <div className="content">
               <h3>Hello Champion</h3>
@@ -68,7 +80,9 @@ function EventHeader() {
           </div>
           <div className="card">
             <div className="image">
-              <img src="/images/Background/card.jpg" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/Background/card.jpg"}
+              />
             </div>
             <div className="content">
               <h3>Play TCN</h3>
